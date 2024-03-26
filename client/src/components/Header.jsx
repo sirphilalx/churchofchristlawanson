@@ -1,9 +1,10 @@
 import React from "react";
-import { Navbar, TextInput } from "flowbite-react";
-import { Link } from "react-router-dom";
-import { AiOutlineSearch } from "react-icons/ai";
+import { Button, Navbar, NavbarToggle, TextInput } from "flowbite-react";
+import { Link, useLocation } from "react-router-dom";
+import { AiFillFire, AiOutlineSearch } from "react-icons/ai";
 
 const Header = () => {
+  const path = useLocation().pathname;
   return (
     <Navbar className="border-b">
       <Link to="/" className="self-center whitespace-nowrap text-sm sm:text-lg">
@@ -20,6 +21,31 @@ const Header = () => {
           className="hidden lg:inline"
         />
       </form>
+      <Button className="w-12 h-10  lg:hidden" color="grey" pill>
+        <AiOutlineSearch />
+      </Button>
+      <div className="flex gap-2 md:order-2">
+        <Button className="w-12 h-10 hidden sm:inline" color="grey" pill>
+          <AiFillFire />
+        </Button>
+        <Link to="/sign-in">
+          <Button gradientDuoTone="purpleToBlue" outline>
+            Sign in
+          </Button>
+        </Link>
+        <NavbarToggle />
+      </div>
+      <Navbar.Collapse>
+        <Navbar.Link as={"div"} active={path === "/"}>
+          <Link to="/">Home</Link>
+        </Navbar.Link>
+        <Navbar.Link as={"div"} active={path === "/about"}>
+          <Link to="/about">About</Link>
+        </Navbar.Link>
+        <Navbar.Link as={"div"} active={path === "/library"}>
+          <Link to="/library">Library</Link>
+        </Navbar.Link>
+      </Navbar.Collapse>
     </Navbar>
   );
 };
