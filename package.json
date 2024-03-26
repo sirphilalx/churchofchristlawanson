@@ -1,0 +1,16 @@
+{
+  "name": "church-website",
+  "version": "1.0.0",
+  "description": "This is a website for churches to use to display useful information that concerns them, members and administrators of the church",
+  "type":"module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon api/index.js",
+    "start": "node api/index.js"
+  },
+  "author": "Philemon Okpokpa",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
