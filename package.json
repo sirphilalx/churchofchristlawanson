@@ -2,7 +2,7 @@
   "name": "church-website",
   "version": "1.0.0",
   "description": "This is a website for churches to use to display useful information that concerns them, members and administrators of the church",
-  "type":"module",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon api/index.js",
@@ -11,6 +11,8 @@
   "author": "Philemon Okpokpa",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.19.2"
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.2.3"
   }
 }
