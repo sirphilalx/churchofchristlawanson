@@ -9,7 +9,7 @@ const Header = () => {
     <Navbar className="border-b">
       <Link to="/" className="self-center whitespace-nowrap text-sm sm:text-lg">
         <span className="px-2 py-1 bg-gradient-to-r from-violet-500 via-purple-500 to-pink-500 rounded-lg text-white mr-2">
-          COC
+          9ja Pidgin
         </span>
         Blog
       </Link>
