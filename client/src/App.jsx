@@ -6,6 +6,7 @@ import Signup from "./pages/Signup";
 import Signin from "./pages/Signin";
 import Dashboard from "./pages/Dashboard";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Library from "./pages/Library";
 import Directory from "./pages/Directory";
 
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/library" Component={Library} />
         <Route path="/directory" Component={Directory} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };
