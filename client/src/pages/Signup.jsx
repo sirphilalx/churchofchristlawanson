@@ -90,8 +90,8 @@ const Signup = () => {
               >
                 {loading ? (
                   <>
-                    <Spinner size="sm" />{" "}
-                    <span className="pl-5">Loading...</span>{" "}
+                    <Spinner size="sm" />
+                    <span className="pl-5">Loading...</span>
                   </>
                 ) : (
                   "Sign Up"
