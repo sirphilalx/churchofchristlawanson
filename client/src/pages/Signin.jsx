@@ -1,4 +1,5 @@
 import { Alert, Button, Label, Spinner, TextInput } from "flowbite-react";
+import OAuth from "../components/OAuth";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -93,6 +94,7 @@ const Signin = () => {
                   "Sign In"
                 )}
               </Button>
+              <OAuth />
             </form>
             <div className="mt-5 flex gap-2 ">
               <span>you no get account?</span>
