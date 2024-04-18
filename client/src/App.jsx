@@ -9,6 +9,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Library from "./pages/Library";
 import Directory from "./pages/Directory";
+import PrivateRoute from "./components/PrivateRoute";
 
 const App = () => {
   return (
@@ -19,7 +20,9 @@ const App = () => {
         <Route path="/about" Component={About} />
         <Route path="/sign-up" Component={Signup} />
         <Route path="/sign-in" Component={Signin} />
-        <Route path="/Dashboard" Component={Dashboard} />
+        <Route Component={PrivateRoute}>
+          <Route path="/Dashboard" Component={Dashboard} />
+        </Route>
         <Route path="/library" Component={Library} />
         <Route path="/directory" Component={Directory} />
       </Routes>
